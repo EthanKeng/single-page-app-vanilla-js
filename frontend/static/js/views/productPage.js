@@ -9,7 +9,7 @@ export default class extends AbstractView {
     async getHtml() {
         return `
             <h1>productPage</h1>
-            <p>Manage your privacy and configuration.</p>
+            <p>商品ページです。</p>
         `;
     }
 }
