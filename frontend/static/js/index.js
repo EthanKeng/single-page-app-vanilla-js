@@ -1,7 +1,10 @@
 import Dashboard from "./views/Dashboard.js";
-import Posts from "./views/Posts.js";
+import hptag from "./views/hp-tag.js";
 import PostView from "./views/PostView.js";
-import Settings from "./views/Settings.js";
+import productPage from "./views/productPage.js";
+import CartPage from "./views/CartPage.js";
+import CVpage from "./views/CVpage.js";
+
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
@@ -20,11 +23,13 @@ const navigateTo = url => {
 };
 
 const router = async () => {
-    const routes = [
+    const routes = [    
         { path: "/", view: Dashboard },
-        { path: "/posts", view: Posts },
+        { path: "/hptag", view: hptag },
         { path: "/posts/:id", view: PostView },
-        { path: "/settings", view: Settings }
+        { path: "/CVpage", view: CVpage },
+        { path: "/CartPage", view: CartPage },
+        { path: "/productPage", view: productPage }
     ];
 
     // Test each route for potential match
